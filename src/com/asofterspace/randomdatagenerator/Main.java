@@ -121,26 +121,39 @@ public class Main {
 		String firstname = getRandomFirstName();
 		String lastname = getRandomLastName();
 
-		result.append("UPDATE users SET first_name = '");
+		result.append("UPDATE users SET first_name = \"");
 		result.append(firstname);
-		result.append("', last_name = '");
+		result.append("\", last_name = \"");
 		result.append(lastname);
-		result.append("', email = '");
-		result.append(makeUnique(firstname.toLowerCase() + lastname.toLowerCase()));
-		result.append("@example.com' ");
+		result.append("\", email = \"");
+		result.append(makeUnique(forEmail(firstname + lastname)));
+		result.append("@example.com\" ");
 		result.append("WHERE id = ");
 		result.append(id);
 		result.append(";\n");
 
-		result.append("UPDATE profiles SET name = '");
+		result.append("UPDATE profiles SET name = \"");
 		result.append(firstname);
 		result.append(" ");
 		result.append(lastname);
-		result.append("' WHERE user_id = ");
+		result.append("\" WHERE user_id = ");
 		result.append(id);
 		result.append(";");
 
 		return result.toString();
+	}
+
+	private static void forEmail(String name) {
+
+		name = name.toLowerCase();
+
+		name = name.replace("'", "");
+		name = name.replace("é", "e");
+		name = name.replace("ó", "o");
+		name = name.replace("ö", "oe");
+		name = name.replace("ð", "d");
+
+		return name;
 	}
 
 	private static void initUnique() {
