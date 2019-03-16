@@ -143,7 +143,7 @@ public class Main {
 		return result.toString();
 	}
 
-	private static void forEmail(String name) {
+	private static String forEmail(String name) {
 
 		name = name.toLowerCase();
 
