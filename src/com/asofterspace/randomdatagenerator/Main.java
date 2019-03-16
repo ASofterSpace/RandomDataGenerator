@@ -84,15 +84,19 @@ public class Main {
 			return;
 		}
 
-		List<String> ids = input.getContents();
+		List<String> unsanitizedIds = input.getContents();
+		List<String> ids = new ArrayList<>();
 
-		for (String id : ids) {
+		for (String id : unsanitizedIds) {
+
 			id = id.replace("\"", "");
 			id = id.replace("\'", "");
 			id = id.replace(";", "");
 			id = id.replace(",", "");
 			id = id.replace(" ", "");
 			id = id.replace("\t", "");
+
+			ids.add(id);
 		}
 
 		List<String> result = new ArrayList<String>();
