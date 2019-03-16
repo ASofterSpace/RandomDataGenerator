@@ -151,6 +151,7 @@ public class Main {
 
 		name = name.toLowerCase();
 
+		name = name.replace(" ", "");
 		name = name.replace("'", "");
 		name = name.replace("é", "e");
 		name = name.replace("ó", "o");
