@@ -130,13 +130,13 @@ public class Main {
 		result.append("@example.com' ");
 		result.append("WHERE id = ");
 		result.append(id);
-		result.append(";");
+		result.append(";\n");
 
 		result.append("UPDATE profiles SET name = '");
 		result.append(firstname);
 		result.append(" ");
 		result.append(lastname);
-		result.append(" WHERE user_id = ");
+		result.append("' WHERE user_id = ");
 		result.append(id);
 		result.append(";");
 
