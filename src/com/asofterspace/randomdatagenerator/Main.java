@@ -15,34 +15,46 @@ import java.util.List;
 public class Main {
 
 	public final static String PROGRAM_TITLE = "RandomDataGenerator";
-	public final static String VERSION_NUMBER = "0.0.0.1(" + Utils.TOOLBOX_VERSION_NUMBER + ")";
-	public final static String VERSION_DATE = "16. March 2019";
+	public final static String VERSION_NUMBER = "0.0.0.2(" + Utils.TOOLBOX_VERSION_NUMBER + ")";
+	public final static String VERSION_DATE = "16. March 2019 - 18. March 2019";
 
 	private static List<String> encounteredData = null;
 
 	private final static List<String> FIRST_NAMES = Arrays.asList(
-		"Aaron", "Abigail", "Alan", "Amber", "Amy", "Andrea", "Ashley", "Benedict", "Bob",
+		"Aaron", "Abigail", "Agustín", "Ahmed", "Alan", "Alvaro", "Amber", "Amy", "Anastasiya",
+		"Andrea", "André", "Ariel", "Ashley", "Aya", "Benedict", "Bertrand", "Bob", "Bogdan",
 		"Brittany", "Bruce", "Calvin", "Dale", "Denise", "Dennis", "Diana", "Donna", "Dylan",
-		"Edgar", "Elinor", "Eric", "Eva", "Finn", "Franciscus", "George", "Georgia", "Gerhardt",
-		"Gregory", "Harald", "Harry", "Hertha", "Imre", "Jacques", "Jakob", "Jennifer", "Jerry",
-		"Jesse", "Joe", "Josh", "José", "Juan", "Julie", "Jón", "Karen", "Kayla", "Kelly",
-		"Kevin", "Kim", "Kimberly", "Liu", "Lorraine", "Manuel", "Marie", "Muhammad", "Patrick",
-		"Paul", "Pauline", "Peter", "Phillip", "Rebekka", "Riccardo", "Ronald", "Ruth", "Sandra",
-		"Sarah", "Shirin", "Sigurður", "Stephen", "Susan", "Tasuku", "Thabea", "Thomas",
-		"Venkatraman", "Walter", "Wolfgang", "Yoichiro", "Yoshinori", "Yves", "Ágúst"
+		"Edgar", "Eevi", "Elinor", "Emma", "Enzo", "Eric", "Eva", "Fatima", "Finn", "Franciscus",
+		"Gabriel", "George", "Georgia", "Gerhardt", "Grace", "Gregory", "Harald", "Harry", "Hertha",
+		"Imre", "Isabella", "Jacques", "Jakob", "Jan", "Jana", "Jennifer", "Jennifer", "Jerry",
+		"Jesse", "Joe", "Josh", "José", "Juan", "Julie", "Jón", "Karen", "Kayla", "Kelly", "Kevin",
+		"Kim", "Kimberly", "Lara", "Lina", "Liu", "Lorraine", "Louis", "Luna", "Léon", "Mamadou",
+		"Manuel", "Marie", "Martha", "Muhammad", "Olga", "Omar", "Patrick", "Paul", "Pauline",
+		"Peter", "Phillip", "Rebekka", "Riccardo", "Ronald", "Ruth", "Sandra", "Sarah", "Shirin",
+		"Sigurður", "Sophia", "Stephen", "Susan", "Tasuku", "Thabea", "Thomas", "Venkatraman",
+		"Walter", "Wolfgang", "Yoichiro", "Yoshinori", "Yousouf", "Yves", "Zoey", "Ágúst"
 	);
 
 	private final static List<String> LAST_NAMES = Arrays.asList(
-		"Alexievich", "Allison", "Arnold", "Ashkin", "Bednorz", "Betzig", "Charpak", "Cho", "Chu",
-		"Corey", "de Gennes", "Deaton", "Dubochet", "Edwards", "Feringa", "Haavelmo", "Harrison",
-		"Hart", "Henderson", "Higgs", "Hoffmann", "Holmström", "Honjo", "Ishiguro", "Jónsson",
-		"Krebs", "Levitt", "Lindahl", "Lovelace", "Mahfouz", "Miller", "Mirrlees", "Modiano",
-		"Moser", "Mourou", "Mukengere", "Munroe", "Muran", "Müller", "Nordhaus", "O'Connor",
-		"Ohsumi", "Ramakrishnan", "Reines", "Richardson", "Rodbell", "Romer", "Santos", "Satyarthi",
-		"Schwartz", "Selten", "Sen", "Sharpe", "Smith", "Strickland", "Szymborska", "Thorpe",
-		"Tirole", "Tonegawa", "Tranströmer", "Trimble", "Turing", "Tyler", "Varmus", "Voss",
-		"Warhol", "Weiss", "Williams", "Wineland", "Winter", "Xiaobo", "Yan", "Yousafzai",
-		"zum Moore"
+		"Alexievich", "Allen", "Allison", "Arnold", "Ashkin", "Bednorz", "Betzig", "Blanco",
+		"Charpak", "Chen", "Cho", "Chu", "Clark", "Cohen", "Cooper", "Corey", "Cox", "D'Angelo",
+		"De Smet", "De la Cruz", "Deaton", "Diederich", "Dubochet", "Díaz", "Edwards", "Farkas",
+		"Fekete", "Feringa", "Fernandez", "Fischer", "Friedman", "Gagnon", "Garcia", "Gauthier",
+		"Gruber", "Haas", "Haavelmo", "Hansen", "Harrison", "Hart", "Helgason", "Henderson",
+		"Higgs", "Hoffmann", "Holmström", "Honjo", "Horvat", "Huber", "Ishiguro", "Jacobs",
+		"Jensen", "Jónsson", "Jørgensen", "Kapanadze", "Karlsson", "Korhonen", "Krasniqi",
+		"Krebs", "Kukk", "Kumar", "Lee", "Lehtonen", "Levitt", "Lindahl", "Lindholm", "Lombardi",
+		"Lovelace", "Mahfouz", "Meyers", "Micallef", "Miller", "Mirrlees", "Modiano", "Moser",
+		"Mourou", "Mukengere", "Munroe", "Muran", "Murray", "Mäkinen", "Müller", "Nguyen",
+		"Nielsen", "Niemi", "Nordhaus", "Novak", "Nyman", "Němec", "O'Connor", "O'Neill",
+		"Ohsumi", "Olsen", "Peeters", "Pérez", "Ramakrishnan", "Rathnayake", "Rebane", "Reines",
+		"Rey", "Richardson", "Robinson", "Rodbell", "Rodríguez", "Romer", "Rossi", "Sanders",
+		"Santos", "Satyarthi", "Satō", "Schwartz", "Scott", "Selten", "Sen", "Seo", "Sharpe",
+		"Singh", "Smith", "Strickland", "Szymborska", "Tahirović", "Takahashi", "Tamm", "Taylor",
+		"Thorpe", "Tirole", "Tomić", "Tonegawa", "Torres", "Tranströmer", "Tremblay", "Trimble",
+		"Tuominen", "Turing", "Tyler", "Valverde", "Varmus", "Virtanen", "Voss", "Warhol",
+		"Weber", "Weiss", "Williams", "Wineland", "Winkler", "Winter", "Wolf", "Wouters",
+		"Xiaobo", "Yamamoto", "Yan", "Yousafzai", "Zhang", "de Gennes", "zum Moore"
 	);
 
 
@@ -153,9 +165,15 @@ public class Main {
 
 		name = name.replace(" ", "");
 		name = name.replace("'", "");
+		name = name.replace("á", "a");
+		name = name.replace("ä", "ae");
 		name = name.replace("é", "e");
+		name = name.replace("ě", "e");
+		name = name.replace("ć", "c");
 		name = name.replace("ó", "o");
+		name = name.replace("ō", "o");
 		name = name.replace("ö", "oe");
+		name = name.replace("ø", "oe");
 		name = name.replace("ð", "d");
 
 		return name;
