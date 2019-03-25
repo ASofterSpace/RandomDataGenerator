@@ -33,5 +33,9 @@ src/com/asofterspace/toolbox
 # config files
 config
 
+# input files
+*.csv
+
 # output files
 *.pdf
+*.sql

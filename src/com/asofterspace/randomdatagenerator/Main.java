@@ -143,7 +143,7 @@ public class Main {
 		result.append(lastname);
 		result.append("\", email = \"");
 		result.append(makeUnique(forEmail(firstname + lastname)));
-		result.append("@example.com\" ");
+		result.append("@example.com\", old_password = NULL, `password` = 1 ");
 		result.append("WHERE id = ");
 		result.append(id);
 		result.append(";\n");
